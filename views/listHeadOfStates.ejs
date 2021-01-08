@@ -1,0 +1,34 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<form action="/addHeadOfState">
+    <input type="submit" value="add Head Of State" />
+</form>
+
+<table>
+    <tr>
+        <th>Country</th>
+        <th>Name</th>
+
+    </tr>
+    <% headsOfState.forEach((head)=>
+        { %>
+        <tr>
+            <td>
+                <%= head._id %>
+            </td>
+            <td>
+                <%= head.headOfState %>
+            </td>
+
+        </tr>
+        <% }) %>
+</table>
+
+
+<p><a href="/">Home</a></p>
